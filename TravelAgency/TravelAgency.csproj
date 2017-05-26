@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14FC320C-0B12-46B6-9D96-3C66929B9D7E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DepInjWithUnity</RootNamespace>
-    <AssemblyName>DepInjWithUnity</AssemblyName>
+    <ProjectGuid>{CBBDFDFF-A6A4-412C-BAB4-67AF3B797605}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TravelAgency</RootNamespace>
+    <AssemblyName>TravelAgency</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -54,23 +52,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="TravelOperations.cs" />
+    <Compile Include="TravelService.cs" />
+    <Compile Include="ITravelService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{7df1302c-adc7-42a4-a766-126b4cba99eb}</Project>
-      <Name>Repository</Name>
+    <ProjectReference Include="..\Decameron\Decameron.csproj">
+      <Project>{1261377b-44c1-431e-b0c3-528537c832b1}</Project>
+      <Name>Decameron</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TravelAgency\TravelAgency.csproj">
-      <Project>{cbbdfdff-a6a4-412c-bab4-67af3b797605}</Project>
-      <Name>TravelAgency</Name>
+    <ProjectReference Include="..\OnVacation\OnVacation.csproj">
+      <Project>{aeb9fe73-9269-45fb-af37-63bb2a9c4376}</Project>
+      <Name>OnVacation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
